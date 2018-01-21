@@ -1,7 +1,7 @@
 import request from 'request-promise-native'
 import sqlite from 'sqlite'
 
-const url = 'http://192.168.1.103/tmp'
+const url = 'http://100.2.167.36:60002/tmp'
 
 const makeRequest = () => {
     return request(url, { json: true }, (err, res, body) => {
