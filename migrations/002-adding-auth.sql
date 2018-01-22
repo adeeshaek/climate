@@ -1,0 +1,6 @@
+-- Up
+ALTER TABLE Users ADD COLUMN salt TEXT;
+ALTER TABLE Users ADD COLUMN authToken TEXT;
+ALTER TABLE Users ADD COLUMN authTokenCreatedAt INTEGER;
+
+-- Down

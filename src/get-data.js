@@ -1,5 +1,6 @@
 import request from 'request-promise-native'
 import sqlite from 'sqlite'
+import {now} from './common-utils'
 
 const url = 'http://100.2.167.36:60002/tmp'
 
@@ -21,7 +22,7 @@ const saveData = (data) => {
         database.run("INSERT INTO Climate (temperature, humidity, createdAt) VALUES (?,?,?)",
             data.temperature,
             data.humidity,
-            (new Date).getTime())
+            now())
     })
 }
 
